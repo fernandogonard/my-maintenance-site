@@ -1,8 +1,8 @@
-// Card.jsx
-
 import React from 'react';
+import PropTypes from 'prop-types'; // Importa PropTypes
+
 import './Card.css';
-import whatsappIcon from '../assets/whatsapp-icon-png.jpg'; // Asegúrate de tener la ruta correcta al icono de WhatsApp
+import whatsappIcon from '../assets/whatsapp-icon.jpg';
 
 const Card = ({ title, description, imgSrc }) => {
   return (
@@ -17,6 +17,13 @@ const Card = ({ title, description, imgSrc }) => {
       </div>
     </div>
   );
+};
+
+// Define PropTypes para validar las props
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
 };
 
 export default Card;
