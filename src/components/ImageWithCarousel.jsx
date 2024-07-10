@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './ImageWithCarousel.css';
+import elijebienImage from '../assets/elijebien.jpg';
+import carouselImage1 from '../assets/carousel-image1.jpg';
+import carouselImage2 from '../assets/carousel-image2.jpg';
+import carouselImage3 from '../assets/carousel-image3.jpg';
+import carouselImage4 from '../assets/carousel-image4.jpg';
 
 const ImageWithCarousel = () => {
   const [current, setCurrent] = useState(0);
 
-  const images = [
-    "/src/assets/elijebien.jpg",
-    "/src/assets/carousel-image1.jpg",
-    "/src/assets/carousel-image2.jpg",
-    "/src/assets/carousel-image3.jpg",
-    "/src/assets/carousel-image4.jpg",
-  ];
+
+const images = [
+  elijebienImage,
+  carouselImage1,
+  carouselImage2,
+  carouselImage3,
+  carouselImage4,
+];
 
   useEffect(() => {
     const interval = setInterval(() => {

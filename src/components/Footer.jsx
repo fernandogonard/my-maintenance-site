@@ -2,6 +2,8 @@ import React from 'react';
 import './Footer.css';
 import instagramIcon from '../assets/icons8-instagram-50.png';
 import facebookIcon from '../assets/icons8-facebook-nuevo-50.png';
+import whatsappIcon from '../assets/icons8-whatsapp-50.png';
+
 
 const Footer = () => {
   return (
@@ -23,7 +25,7 @@ const Footer = () => {
       <img src={facebookIcon} alt="Facebook" />
     </a>
     <a href="https://wa.me/5492236685979" target="_blank" rel="noopener noreferrer">
-      <img src="src/assets/icons8-whatsapp-50.png" alt="WhatsApp" />
+    <img src={whatsappIcon} alt="WhatsApp" />
     </a>
   </div>
 </div>
