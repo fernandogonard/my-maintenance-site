@@ -1,0 +1,32 @@
+.image-with-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.carousel__slides {
+  max-width: 100%;
+  overflow: hidden; /* Oculta las partes de las imágenes que se salen del contenedor */
+}
+
+.carousel__slide {
+  display: none; /* Oculta todas las imágenes inicialmente */
+}
+
+.carousel__slide.active {
+  display: block; /* Muestra solo la imagen activa */
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .image-with-carousel {
+    flex-direction: column;
+  }
+}

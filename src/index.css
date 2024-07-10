@@ -1,0 +1,48 @@
+/* Variables de colores */
+:root {
+  --background-color: #f2f4f8; /* Fondo principal (gris claro) */
+  --primary-color: #2c3e50; /* Azul oscuro */
+  --secondary-color: #508abc; /* Azul medio */
+  --accent-color: #95a5a6; /* Gris claro */
+  --text-color: #333; /* Texto principal (gris oscuro) */
+  --muted-text-color: #888; /* Texto secundario (gris medio) */
+  --white-color: #fff; /* Blanco */
+  --black-color: #000; /* Negro */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--white-color);
+  color: var(--background-color);
+}
+
+h1, h2, h3, p {
+  margin-bottom: 15px;
+}
+
+img {
+  max-width: 100%;
+}

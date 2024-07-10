@@ -1,0 +1,90 @@
+
+.service-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel__button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.service-card {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 1200px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-img {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.service-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-card-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--muted-text-color);
+}
+
+.whatsapp-button {
+
+  bottom: 10px;
+  right: 10px;
+
+  width: 60px;
+  height: 60px;
+
+
+
+}
+
+.whatsapp-button img {
+  color: #128c7e;
+  width:100px; /* Tamaño del icono de WhatsApp */
+  flex-direction: row;
+    align-items: center;
+
+}
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .service-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .service-card-img {
+    margin-right: 20px;
+    margin-bottom: 0;
+    max-width: 40%;
+  }
+
+  .service-card-content {
+    max-width: 60%;
+  }
+}

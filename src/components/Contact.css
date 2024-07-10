@@ -1,0 +1,86 @@
+/* Variables de colores */
+:root {
+  --background-color: #f5f5f5; /* Fondo principal (gris claro) */
+  --primary-color: #35424a; /* Azul oscuro */
+  --secondary-color: #5c7080; /* Azul medio */
+  --accent-color: #d1d8dd; /* Gris claro */
+  --text-color: #333; /* Texto principal (gris oscuro) */
+  --muted-text-color: #666; /* Texto secundario (gris medio) */
+  --white-color: #fff; /* Blanco */
+  --black-color: #000; /* Negro */
+}
+
+/* Ejemplo de uso en sección de contacto */
+.contact-section {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 50px 0;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--primary-color); /* Color de fondo del contenedor */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-container label {
+  margin-bottom: 5px;
+  color: var(--white-color); /* Color del texto de las etiquetas */
+}
+
+.contact-container input,
+.contact-container textarea {
+  padding: 10px;
+  border: 1px solid var(--accent-color); /* Color del borde */
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: var(--white-color); /* Color de fondo de los inputs */
+  color: var(--text-color); /* Color del texto de los inputs */
+}
+
+.contact-container button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: var(--secondary-color); /* Color de fondo del botón */
+  color: var(--white-color); /* Color del texto del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+  background-color: var(--accent-color); /* Color de fondo del botón al pasar el ratón */
+}
+
+.contact-container .whatsapp-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--secondary-color); /* Color de fondo del enlace de WhatsApp */
+  color: var(--white-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container .whatsapp-link:hover {
+  background-color: var(--accent-color); /* Color de fondo del enlace de WhatsApp al pasar el ratón */
+}
