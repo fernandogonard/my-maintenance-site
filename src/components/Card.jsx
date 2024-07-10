@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './Card.css';
-import whatsappIcon from './assets/whatsapp-icon.png'; // Asegúrate de tener la ruta correcta al icono de WhatsApp
+import whatsappIcon from '../assets/whatsapp-icon-png.jpg'; // Asegúrate de tener la ruta correcta al icono de WhatsApp
 
 const Card = ({ title, description, imgSrc }) => {
   return (
