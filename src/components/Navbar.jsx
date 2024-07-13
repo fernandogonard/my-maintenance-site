@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import '../assets/logo.png';
+import logo from '../assets/logo.png'; // Asegúrate de que la ruta sea correcta
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +36,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <a href="#home" className="logo" onClick={() => handleNavClick('home')}>
-        <img src="src/assets/logo.png" alt="Logo JP Mantenimiento" />
+        <img src={logo} alt="Logo JP Mantenimiento" />
       </a>
       <div className={`nav-links ${isOpen ? 'active' : ''}`}>
         <a href="#services" onClick={() => handleNavClick('services')}>Servicios</a>

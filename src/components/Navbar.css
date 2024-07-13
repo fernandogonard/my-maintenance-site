@@ -9,12 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   transition: background-color 0.3s ease;
 }
 
 .navbar .logo img {
   max-width: 100px;
+  display: block; /* Asegúrate de que la imagen se muestre como bloque */
 }
 
 .nav-links {
@@ -24,8 +24,8 @@
 
 .nav-links a {
   text-decoration: none;
-  font-size:large;
-  color:black;
+  font-size: large;
+  color: black;
   margin-left: 20px;
   transition: color 0.3s ease;
 }
@@ -35,7 +35,6 @@
 }
 
 .hamburger {
-  
   display: none;
   flex-direction: column;
   cursor: pointer;
@@ -44,7 +43,7 @@
 .hamburger div {
   width: 25px;
   height: 3px;
-  background-color:black;
+  background-color: black;
   margin: 3px 0;
   transition: transform 0.3s ease;
 }
