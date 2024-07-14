@@ -3,18 +3,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-image: var(--primary-color);
+ 
   color: grey;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease;
+  z-index: 1000; /* Asegura que el navbar esté encima de otros elementos */
+}
+
+.navbar.transparent {
+  background-color: transparent; /* Fondo transparente */
+  box-shadow: none; /* Sin sombra */
 }
 
 .navbar .logo img {
   max-width: 100px;
-  display: block; /* Asegúrate de que la imagen se muestre como bloque */
+  display: block;
 }
 
 .nav-links {
@@ -25,7 +31,7 @@
 .nav-links a {
   text-decoration: none;
   font-size: large;
-  color: black;
+  color: rgb(48, 48, 48);
   margin-left: 20px;
   transition: color 0.3s ease;
 }
@@ -55,13 +61,16 @@
   top: 70px;
   left: 0;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo con transparencia */
   padding: 10px 0;
   transition: top 0.3s ease;
+  z-index: 999; /* Asegura que esté encima del navbar */
+
 }
 
 .nav-links.active a {
   margin: 10px 30px;
+  color: rgb(48, 48, 48); /* Texto oscuro */
 }
 
 .nav-links.active .hamburger div:first-child {
@@ -88,13 +97,19 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo con transparencia */
     padding: 10px 0;
     transition: top 0.3s ease;
+    z-index: 999; /* Asegura que esté encima del navbar */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   }
 
   .nav-links.active {
     top: 50px;
+  }
+
+  .nav-links.active a {
+    color: rgb(48, 48, 48); /* Texto oscuro */
   }
 
   .hamburger {
