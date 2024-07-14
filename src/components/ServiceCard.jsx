@@ -8,13 +8,13 @@ import fontaneriaImage from '../assets/fontaneria.jpg';
 import gasImage from '../assets/gas.jpg';
 import pinturaYAcabadosImage from '../assets/pinturaYAcabados.jpg';
 import reemplazoDeTubosLEDImage from '../assets/ReemplazoDeTubosLED.jpg';
+import whatsappIcon from '../assets/whatsapp-icon.jpg'; // Importa la imagen de WhatsApp
 
 const services = [
   {
     title: "Albañilería y Reparaciones Estructurales",
     description: "Ofrecemos servicios de albañilería y reparaciones estructurales para mantener la integridad de tu propiedad. Desde pequeñas reparaciones hasta proyectos más grandes, estamos aquí para garantizar la solidez de tu edificación.",
     img: albanileriaImage,
-    
   },
   {
     title: "Reparación y Mantenimiento de Equipos de Climatización",
@@ -72,8 +72,8 @@ const ServiceCard = () => {
           <p>{description}</p>
           <a>Solicitar presupuesto por WhatsApp</a>
           <a className="whatsapp-button" href="https://wa.me/5492236685979" target="_blank" rel="noopener noreferrer">
-          <img src="src/assets/whatsapp-icon-png.jpg" alt="WhatsApp" />
-        </a>
+            <img src={whatsappIcon} alt="WhatsApp" />
+          </a>
         </div>
       </div>
       <button className="carousel__button carousel__button--next" onClick={nextService}>❯</button>
