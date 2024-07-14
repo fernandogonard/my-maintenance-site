@@ -2,8 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
- 
+  width: 100%; /* Asegura que el navbar ocupe todo el ancho de la pantalla */
   color: grey;
   padding: 15px 30px;
   display: flex;
@@ -65,7 +64,6 @@
   padding: 10px 0;
   transition: top 0.3s ease;
   z-index: 999; /* Asegura que esté encima del navbar */
-
 }
 
 .nav-links.active a {
@@ -105,7 +103,9 @@
   }
 
   .nav-links.active {
-    top: 50px;
+    top: 30px;
+    width: 50%;
+    transform: translateX(60%); /* Ajusta el desplazamiento horizontal */
   }
 
   .nav-links.active a {
@@ -114,5 +114,11 @@
 
   .hamburger {
     display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    margin-left: auto; /* Mueve los enlaces a la derecha */
   }
 }
