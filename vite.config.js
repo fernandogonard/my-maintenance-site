@@ -1,16 +1,13 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  server: {
-    // Configura los tipos MIME adecuadamente
-    mimeTypes: {
-      'jsx': 'application/javascript',
-      'jpg': 'image/jpeg',
-      'jpeg': 'image/jpeg',
-      'png': 'image/png',
-      'gif': 'image/gif',
-      'svg': 'image/svg+xml',
-      'css': 'text/css',
-    },
-  },
+  plugins: [react()],
+  build: {
+    ssr: true,
+    outDir: 'dist', // Asegúrate de que la salida se dirija a la carpeta correcta
+    rollupOptions: {
+      input: 'src/entry-server.jsx' // Ruta correcta al archivo de entrada del servidor
+    }
+  }
 });
