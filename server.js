@@ -1,9 +1,3 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-require('@babel/register')({
-  extensions: ['.jsx'],
-});
-
 import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import { render } from './src/entry-server.jsx';
