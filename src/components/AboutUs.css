@@ -13,7 +13,7 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff; /* Fondo blanco */
-  border-radius: 8px;
+ 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -24,8 +24,7 @@
     url('ruta/a/la/imagen.jpg'); /* Gradiente y fondo de imagen */
   background-size: cover;
   background-blend-mode: overlay; /* Difuminado */
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+ 
   color: #fff;
 }
 
@@ -52,8 +51,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+
 }
 
 @media (max-width: 768px) {
@@ -61,8 +59,5 @@
     flex-direction: column;
   }
 
-  .about-us-text,
-  .about-us-image {
-    border-radius: 8px;
-  }
+ 
 }

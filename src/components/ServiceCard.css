@@ -1,89 +1,57 @@
+/* src/components/ServiceCard.css */
 .service-card-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  position: relative;
+  margin-top: 80px; /* Ajusta este valor según la altura de tu Navbar */
 }
 
 .carousel__button {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--primary-color);
-  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel__button--prev {
+  left: 10px;
+}
+
+.carousel__button--next {
+  right: 10px;
 }
 
 .service-card {
-  background-color: var(--background-color);
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 1200px;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  text-align: center;
 }
 
 .service-card-img {
+  width: 66%;
+  height: auto;
   border-radius: 8px;
-  margin-bottom: 20px;
 }
 
 .service-card-content {
+  padding: 20px;
+}
+
+.service-card-title {
+  margin-bottom: 10px;
+}
+
+.service-card-actions {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.service-card-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.service-card-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.service-card-content p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: var(--muted-text-color);
-}
-
-.whatsapp-button {
-
-  bottom: 10px;
-  right: 10px;
-
-  width: 60px;
-  height: 60px;
-
-
-
-}
-
-.whatsapp-button img {
-  color: #128c7e;
-  width:100px; /* Tamaño del icono de WhatsApp */
-  flex-direction: row;
-    align-items: center;
-
-}
-/* Responsive Styles */
-@media (min-width: 768px) {
-  .service-card {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .service-card-img {
-    margin-right: 20px;
-    margin-bottom: 0;
-    max-width: 40%;
-  }
-
-  .service-card-content {
-    max-width: 60%;
-  }
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
 }

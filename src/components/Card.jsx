@@ -1,24 +1,53 @@
 // src/components/Card.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Card, CardMedia, CardContent, Typography, IconButton, Tooltip } from '@mui/material';
+import ShareIcon from '@mui/icons-material/Share';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import './Card.css';
 
-const Card = ({ title, description, imgSrc }) => {
+const CustomCard = ({ title, description, imgSrc }) => {
+  const handleShare = () => {
+    // Lógica para compartir (ejemplo simple con alert)
+    alert('Compartido!');
+  };
+
   return (
-    <div className="card">
-      <img src={imgSrc} alt={title} className="card__image" />
-      <div className="card__content">
-        <h2 className="card__title">{title}</h2>
-        <p className="card__description">{description}</p>
-      </div>
-    </div>
+    <Card className="card">
+      <CardMedia
+        component="img"
+        image={imgSrc}
+        alt={title}
+        className="card__image"
+      />
+      <CardContent className="card__content">
+        <Typography variant="h5" component="h2" className="card__title">
+          {title}
+        </Typography>
+        <Typography variant="body2" component="p" className="card__description">
+          {description}
+        </Typography>
+        <div className="card__actions">
+          <Tooltip title="Compartir">
+            <IconButton onClick={handleShare} color="primary">
+              <ShareIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Agregar a favoritos">
+            <IconButton color="secondary">
+              <FavoriteIcon />
+            </IconButton>
+          </Tooltip>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 
-Card.propTypes = {
+CustomCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
 };
 
-export default Card;
+export default CustomCard;

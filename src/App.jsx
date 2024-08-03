@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Header from './components/Header';
 import ServiceCard from './components/ServiceCard';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
@@ -17,26 +16,27 @@ const App = () => {
     <Router>
       <div>
         <Navbar />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* Define otras rutas aquí */}
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-        <section id="services">
-          <ServiceCard />
-        </section>
-        <section id="about-us">
-          <AboutUs />
-        </section>
-        <section id="image-carousel">
-          <ImageWithCarousel />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-        <Footer />
-        <WhatsAppButton /> {/* Añade el botón de WhatsApp */}
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* Define otras rutas aquí */}
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          <section id="services">
+            <ServiceCard />
+          </section>
+          <section id="about-us">
+            <AboutUs />
+          </section>
+          <section id="image-carousel">
+            <ImageWithCarousel />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+          <Footer />
+          <WhatsAppButton /> {/* Añade el botón de WhatsApp */}
+        </div>
       </div>
     </Router>
   );

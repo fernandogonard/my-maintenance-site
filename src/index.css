@@ -11,13 +11,13 @@
 }
 
 * {
-  margin: 0;
+  margin: ;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial , Bold;
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -41,7 +41,7 @@ button:hover {
 }
 
 h1, h2, h3, p {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 img {

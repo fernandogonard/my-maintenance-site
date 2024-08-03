@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { IconButton, Tooltip, Typography, Box, Button } from '@mui/material';
+import { ArrowBack, ArrowForward} from '@mui/icons-material';
+
 import './ServiceCard.css';
 
 import albanileriaImage from '../assets/albanileria.jpg';
@@ -8,7 +11,6 @@ import fontaneriaImage from '../assets/fontaneria.jpg';
 import gasImage from '../assets/gas.jpg';
 import pinturaYAcabadosImage from '../assets/pinturaYAcabados.jpg';
 import reemplazoDeTubosLEDImage from '../assets/ReemplazoDeTubosLED.jpg';
-import whatsappIcon from '../assets/whatsapp-icon.jpg'; // Importa la imagen de WhatsApp
 
 const services = [
   {
@@ -61,23 +63,45 @@ const ServiceCard = () => {
 
   const { title, description, img } = services[current];
 
+
+  const whatsappUrl = "https://wa.me/5492236685979?text=Hola%20me%20interesa%20el%20presupuesto%20para%20los%20servicios";
+
   return (
-    <div className="service-card-container">
-      <button className="carousel__button carousel__button--prev" onClick={prevService}>❮</button>
-      <div className="service-card">
+    <Box className="service-card-container">
+      <IconButton onClick={prevService} className="carousel__button carousel__button--prev">
+        <ArrowBack />
+      </IconButton>
+      <Box className="service-card">
         <img src={img} alt={title} className="service-card-img" />
-        <div className="service-card-content">
-          <h1>Nuestros Servicios</h1>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <a>Solicitar presupuesto por WhatsApp</a>
-          <a className="whatsapp-button" href="https://wa.me/5492236685979" target="_blank" rel="noopener noreferrer">
-            <img src={whatsappIcon} alt="WhatsApp" />
-          </a>
-        </div>
-      </div>
-      <button className="carousel__button carousel__button--next" onClick={nextService}>❯</button>
-    </div>
+        <Box className="service-card-content">
+          <Typography variant="h4" component="h1" className="service-card-title">
+            Nuestros Servicios
+          </Typography>
+          <Typography variant="h6" component="h2">
+            {title}
+          </Typography>
+          <Typography variant="body1">
+            {description}
+          </Typography>
+          <Box className="service-card-actions">
+           
+            <Tooltip title="Solicitar presupuesto por WhatsApp">
+              <Button
+                variant="contained"
+                color="primary"
+                className="whatsapp-button"
+                onClick={() => window.open(whatsappUrl, '_blank')}
+              >
+                Solicitar Presupuesto
+              </Button>
+            </Tooltip>
+          </Box>
+        </Box>
+      </Box>
+      <IconButton onClick={nextService} className="carousel__button carousel__button--next">
+        <ArrowForward />
+      </IconButton>
+    </Box>
   );
 };
 

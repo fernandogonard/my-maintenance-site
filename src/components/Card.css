@@ -1,35 +1,37 @@
 /* src/components/Card.css */
 .card {
   background-color: var(--background-color);
-  border-radius: 8px;
-  padding: 20px;
+
   max-width: 1200px;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card__image {
-  border-radius: 8px;
-  margin-bottom: 20px;
-  flex: 1;
+ 
+  max-height: 200px; /* Ajusta según sea necesario */
+  object-fit: cover;
 }
 
 .card__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex: 2;
+  padding: 20px;
 }
 
 .card__title {
   font-size: 1.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .card__description {
   font-size: 1rem;
-  margin-bottom: 20px;
   color: var(--muted-text-color);
+  margin-bottom: 20px;
+}
+
+.card__actions {
+  display: flex;
+  gap: 10px;
 }
