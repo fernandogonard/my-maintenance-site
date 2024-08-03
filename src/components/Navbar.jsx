@@ -38,7 +38,7 @@ const Navbar = () => {
       <a href="#home" className="logo" onClick={() => handleNavClick('home')}>
         <img src={logo} alt="Logo JP Mantenimiento" />
       </a>
-      <h1>JP Mantenimientop y Reciclado de propiedades</h1>
+      <h1>JP Mantenimiento y Reciclado de propiedades</h1>
       <div className={`nav-links ${isOpen ? 'active' : ''}`}>
         <a href="#services" onClick={() => handleNavClick('services')}>Servicios</a>
         <a href="#about-us" onClick={() => handleNavClick('about-us')}>Sobre Nosotros</a>

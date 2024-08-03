@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IconButton, Tooltip, Typography, Box, Button } from '@mui/material';
-import { ArrowBack, ArrowForward} from '@mui/icons-material';
+import { ArrowBack, ArrowForward } from '@mui/icons-material';
 
 import './ServiceCard.css';
 
@@ -15,12 +15,12 @@ import reemplazoDeTubosLEDImage from '../assets/ReemplazoDeTubosLED.jpg';
 const services = [
   {
     title: "Albañilería y Reparaciones Estructurales",
-    description: "Ofrecemos servicios de albañilería y reparaciones estructurales para mantener la integridad de tu propiedad. Desde pequeñas reparaciones hasta proyectos más grandes, estamos aquí para garantizar la solidez de tu edificación.",
+    description: "Te ofrecemos servicios de albañilería y reparaciones estructurales para mantener la integridad de tu propiedad. Desde pequeñas reparaciones hasta proyectos más grandes, estamos acá para garantizar la solidez de tu edificación.",
     img: albanileriaImage,
   },
   {
     title: "Reparación y Mantenimiento de Equipos de Climatización",
-    description: "Brindamos servicios especializados para mantener tus sistemas de climatización en óptimas condiciones. Desde la reparación de aires acondicionados hasta la optimización de sistemas, aseguramos un ambiente confortable.",
+    description: "Brindamos servicios especializados para mantener tus sistemas de climatización en óptimas condiciones. Desde la reparación de aires acondicionados hasta la optimización de sistemas, nos aseguramos de que tu ambiente sea siempre confortable.",
     img: climatizacionImage,
   },
   {
@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: "Mantenimiento de Baños y Fontanería",
-    description: "Nos especializamos en el mantenimiento de baños y sistemas de fontanería. Desde la reparación de fugas hasta la instalación de nuevos accesorios, aseguramos un funcionamiento eficiente de tus instalaciones sanitarias.",
+    description: "Nos especializamos en el mantenimiento de baños y sistemas de fontanería. Desde la reparación de fugas hasta la instalación de nuevos accesorios, nos encargamos de que tus instalaciones sanitarias funcionen perfectamente.",
     img: fontaneriaImage,
   },
   {
@@ -40,12 +40,12 @@ const services = [
   },
   {
     title: "Pintura y Acabados",
-    description: "Nuestros expertos en pintura proporcionan servicios de alta calidad para dar vida a tus espacios. Ya sea una nueva capa de color o un acabado especial, nos encargamos de transformar tus ambientes.",
+    description: "Nuestros expertos en pintura ofrecen servicios de alta calidad para darle vida a tus espacios. Ya sea una nueva capa de color o un acabado especial, nos encargamos de transformar tus ambientes.",
     img: pinturaYAcabadosImage,
   },
   {
     title: "Instalación y Reemplazo de Iluminación LED",
-    description: "Actualizamos el sistema de iluminación de su hogar o hotel a tecnología LED, que ofrece mayor eficiencia energética y durabilidad. Instalamos lámparas, focos y tubos LED en diferentes áreas para mejorar la iluminación y reducir costos de electricidad.",
+    description: "Actualizamos el sistema de iluminación de tu hogar o negocio a tecnología LED, que ofrece mayor eficiencia energética y durabilidad. Instalamos lámparas, focos y tubos LED en diferentes áreas para mejorar la iluminación y reducir costos de electricidad.",
     img: reemplazoDeTubosLEDImage,
   },
 ];
@@ -62,7 +62,6 @@ const ServiceCard = () => {
   };
 
   const { title, description, img } = services[current];
-
 
   const whatsappUrl = "https://wa.me/5492236685979?text=Hola%20me%20interesa%20el%20presupuesto%20para%20los%20servicios";
 
@@ -84,7 +83,6 @@ const ServiceCard = () => {
             {description}
           </Typography>
           <Box className="service-card-actions">
-           
             <Tooltip title="Solicitar presupuesto por WhatsApp">
               <Button
                 variant="contained"
