@@ -5,7 +5,7 @@ import ServiceCard from './components/ServiceCard';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ImageWithCarousel from './components/ImageWithCarousel';
+import VideoWithLoop from './components/VideoWithLoop';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import WhatsAppButton from './components/WhatsAppButton'; // Importa el botón de WhatsApp
@@ -29,7 +29,7 @@ const App = () => {
             <AboutUs />
           </section>
           <section id="image-carousel">
-            <ImageWithCarousel />
+            <VideoWithLoop />
           </section>
           <section id="contact">
             <Contact />
