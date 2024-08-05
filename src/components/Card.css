@@ -1,22 +1,25 @@
-/* src/components/Card.css */
 .card {
-  background-color: var(--background-color);
-
-  max-width: 1200px;
   display: flex;
-  flex-direction: column;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: var(--background-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: row; /* Asegura que la imagen y el contenido estén en fila */
 }
 
 .card__image {
- 
-  max-height: 200px; /* Ajusta según sea necesario */
+  width: 400px; /* Establece un ancho fijo para la imagen */
+  height: auto;
   object-fit: cover;
 }
 
 .card__content {
+  flex: 1; /* Toma el espacio restante */
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
   padding: 20px;
 }
 

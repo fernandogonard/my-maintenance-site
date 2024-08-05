@@ -1,38 +1,48 @@
 import React from 'react';
+import { Box, Typography, TextField, Button } from '@mui/material';
+
 import './Contact.css';
 
 const Contact = () => {
-  const phoneNumber = '+5492236685979'; // Número de teléfono de WhatsApp
+  const phoneNumber = '+5492236685979';
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Obtener los valores de nombre y mensaje del formulario
     const name = event.target.elements.name.value;
     const message = event.target.elements.message.value;
-
-    // Crear el enlace para enviar el mensaje por WhatsApp
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hola, soy ${name}. ${message}`)}`;
-
-    // Redirigir al usuario a WhatsApp
     window.open(whatsappLink, '_blank');
   };
 
   return (
-    <div className="contact-section" id="contact">
-      <div className="contact-container">
-        <h2>Contacto</h2>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Nombre</label>
-          <input type="text" id="name" name="name" required />
-        
-          <label htmlFor="message">Mensaje</label>
-          <textarea id="message" name="message" required></textarea>
-          
-          <button type="submit">Enviar por WhatsApp</button>
+    <Box className="contact-section" id="contact">
+      <Box className="contact-container">
+        <Typography variant="h2" component="h2" className="contact-title">
+          Contacto
+        </Typography>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <TextField
+            label="Nombre"
+            name="name"
+            variant="outlined"
+            fullWidth
+            required
+          />
+          <TextField
+            label="Mensaje"
+            name="message"
+            variant="outlined"
+            multiline
+            rows={4}
+            fullWidth
+            required
+          />
+          <Button type="submit" variant="contained" color="primary" className="contact-button">
+            Enviar por WhatsApp
+          </Button>
         </form>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 

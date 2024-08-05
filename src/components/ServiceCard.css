@@ -1,10 +1,11 @@
-/* src/components/ServiceCard.css */
 .service-card-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 80px; /* Ajusta este valor según la altura de tu Navbar */
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .carousel__button {
@@ -12,6 +13,8 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
 }
 
 .carousel__button--prev {
@@ -24,20 +27,27 @@
 
 .service-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  position: relative;
 }
 
 .service-card-img {
-  width: 66%;
+  width: 50%;
   height: auto;
-  border-radius: 8px;
+  object-fit: cover;
 }
 
 .service-card-content {
   padding: 20px;
+  width: 50%;
 }
 
 .service-card-title {
@@ -51,7 +61,21 @@
   margin-top: 20px;
 }
 
-.whatsapp-icon {
-  width: 30px;
-  height: 30px;
+.whatsapp-button {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+  }
+  
+  .service-card-img {
+    width: 100%;
+  }
+  
+  .service-card-content {
+    width: 100%;
+  }
 }

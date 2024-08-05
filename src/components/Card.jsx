@@ -1,4 +1,3 @@
-// src/components/Card.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardMedia, CardContent, Typography, IconButton, Tooltip } from '@mui/material';
