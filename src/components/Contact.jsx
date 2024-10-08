@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
-
 import './Contact.css';
 
 const Contact = () => {
@@ -8,9 +7,8 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const name = event.target.elements.name.value;
-    const message = event.target.elements.message.value;
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hola, soy ${name}. ${message}`)}`;
+    const { name, message } = event.target.elements;
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hola, soy ${name.value}. ${message.value}`)}`;
     window.open(whatsappLink, '_blank');
   };
 

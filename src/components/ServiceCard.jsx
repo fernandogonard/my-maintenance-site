@@ -71,7 +71,7 @@ const ServiceCard = () => {
         <ArrowBack />
       </IconButton>
       <Box className="service-card">
-        <img src={img} alt={title} className="service-card-img" />
+        <img src={img} alt={title} className="service-card-img" loading="lazy" />
         <Box className="service-card-content">
           <Typography variant="h4" component="h1" className="service-card-title">
             Nuestros Servicios

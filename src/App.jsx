@@ -1,3 +1,4 @@
+// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -8,7 +9,7 @@ import Footer from './components/Footer';
 import VideoWithLoop from './components/VideoWithLoop';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
-import WhatsAppButton from './components/WhatsAppButton'; // Importa el botón de WhatsApp
+import WhatsAppButton from './components/WhatsAppButton'; // Botón de WhatsApp
 import './index.css';
 
 const App = () => {
@@ -19,7 +20,6 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* Define otras rutas aquí */}
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <section id="services">
@@ -35,7 +35,7 @@ const App = () => {
             <Contact />
           </section>
           <Footer />
-          <WhatsAppButton /> {/* Añade el botón de WhatsApp */}
+          <WhatsAppButton />
         </div>
       </div>
     </Router>
