@@ -1,0 +1,53 @@
+/* src/styles/PageNotFound.css */
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #f0f0f0; /* Color de fondo suave */
+    color: #333; /* Color del texto */
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Fuente moderna */
+    padding: 20px; /* Espaciado */
+    position: relative; /* Posicionamiento para el fondo */
+    overflow: hidden; /* Evitar el desbordamiento */
+  }
+  
+  .page-not-found h1 {
+    font-size: 3rem; /* Tamaño del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: #ff6347; /* Color vibrante para el título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+  }
+  
+  .page-not-found p {
+    font-size: 1.2rem; /* Tamaño del párrafo */
+    margin-bottom: 30px; /* Espaciado inferior */
+  }
+  
+  .page-not-found img {
+    width: 100%;
+    max-width: 600px; /* Tamaño máximo de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra de la imagen */
+  }
+  
+  /* Efecto de fondo animado */
+  .background-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff6b6b, #f8e72d, #6bff6b, #6bbcff);
+    animation: gradientAnimation 6s ease infinite; /* Animación del fondo */
+    z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
