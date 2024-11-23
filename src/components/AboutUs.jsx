@@ -9,8 +9,8 @@ const AboutUs = () => {
         <div className="about-us-text">
           <h2>Quiénes Somos</h2>
           <p>
-  En JP Mantenimiento, somos expertos en ofrecer servicios de <strong>mantenimiento integral</strong> para <strong>hogares y hoteles</strong> en <strong>Mar del Plata, Argentina</strong>. Nuestro equipo incluye profesionales capacitados en <strong>electricidad</strong>, <strong>plomería</strong>, <strong>albañilería</strong>, <strong>pintura</strong>, y más. 
-  Nos aseguramos de mantener sus instalaciones en óptimas condiciones para garantizar la seguridad y el confort. Ya sea que necesite una <strong>reparación</strong> o una <strong>renovación</strong>, estamos aquí para ayudarle.
+  En <strong>JP Mantenimiento</strong>, somos los referentes en <strong>mantenimiento integral</strong> para <strong>hogares y hoteles</strong> en <strong>Mar del Plata</strong>. Nuestro equipo local está formado por profesionales capacitados en <strong>electricidad</strong>, <strong>plomería</strong>, <strong>albañilería</strong>, <strong>pintura</strong>, y mucho más.  
+  Ofrecemos <strong>servicios confiables y rápidos</strong>, asegurando que sus instalaciones estén siempre en las mejores condiciones. Desde una <strong>reparación urgente</strong> hasta <strong>renovaciones completas</strong>, en JP Mantenimiento estamos a su servicio, con la calidad y dedicación que nos caracteriza en la región.
 </p>
         </div>
         <div className="about-us-image">

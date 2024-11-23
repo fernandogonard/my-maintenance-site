@@ -7,16 +7,15 @@ import './Card.css';
 
 const CustomCard = ({ title, description, imgSrc }) => {
   const handleShare = () => {
-    // Lógica para compartir (ejemplo simple con alert)
-    alert('Compartido!');
+    alert(`¡Has compartido "${title}" con éxito!`);
   };
 
   return (
-    <Card className="card">
+    <Card className="card" role="article" aria-label={`Card para ${title}`}>
       <CardMedia
         component="img"
         image={imgSrc}
-        alt={title}
+        alt={`Imagen representativa de ${title}`}
         className="card__image"
       />
       <CardContent className="card__content">
@@ -27,13 +26,20 @@ const CustomCard = ({ title, description, imgSrc }) => {
           {description}
         </Typography>
         <div className="card__actions">
-          <Tooltip title="Compartir">
-            <IconButton onClick={handleShare} color="primary">
+          <Tooltip title="Compartir este contenido">
+            <IconButton
+              onClick={handleShare}
+              color="primary"
+              aria-label="Compartir"
+            >
               <ShareIcon />
             </IconButton>
           </Tooltip>
           <Tooltip title="Agregar a favoritos">
-            <IconButton color="secondary">
+            <IconButton
+              color="secondary"
+              aria-label="Agregar a favoritos"
+            >
               <FavoriteIcon />
             </IconButton>
           </Tooltip>

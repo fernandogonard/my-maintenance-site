@@ -1,40 +1,87 @@
+:root {
+  --background-color: #fff;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.15);
+  --muted-text-color: #555;
+  --primary-color: #007bff;
+  --secondary-color: #e63946;
+}
+
 .card {
   display: flex;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 20px auto;
   background-color: var(--background-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
   overflow: hidden;
-  flex-direction: row; /* Asegura que la imagen y el contenido estén en fila */
+  flex-direction: row;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-5px); /* Levanta el card */
 }
 
 .card__image {
-  width: 400px; /* Establece un ancho fijo para la imagen */
+  width: 300px;
   height: auto;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card__image:hover {
+  transform: scale(1.05); /* Zoom suave */
 }
 
 .card__content {
-  flex: 1; /* Toma el espacio restante */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
+  justify-content: center;
+  gap: 10px;
   padding: 20px;
 }
 
 .card__title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 .card__description {
   font-size: 1rem;
+  line-height: 1.5;
   color: var(--muted-text-color);
-  margin-bottom: 20px;
 }
 
 .card__actions {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+}
+
+.card__actions .MuiIconButton-root {
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.card__actions .MuiIconButton-root:hover {
+  transform: scale(1.1); /* Botones más grandes al pasar el mouse */
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Apila la imagen y el contenido */
+  }
+
+  .card__image {
+    width: 100%;
+    height: 200px; /* Ajuste para pantallas pequeñas */
+  }
+
+  .card__content {
+    text-align: center; /* Centra el contenido en móviles */
+  }
 }
