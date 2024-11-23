@@ -15,40 +15,48 @@ import reemplazoDeTubosLEDImage from '../assets/ReemplazoDeTubosLED.jpg';
 const services = [
   {
     title: "Albañilería y Reparaciones Estructurales",
-    description: "Te ofrecemos servicios de albañilería y reparaciones estructurales para mantener la integridad de tu propiedad. Desde pequeñas reparaciones hasta proyectos más grandes, estamos acá para garantizar la solidez de tu edificación.",
+    description:
+      "Realizamos trabajos de albañilería y mantenimiento estructural en Mar del Plata. Ya sea que necesites reparar una pared, revocar superficies o encarar un proyecto más grande, nuestro equipo se encarga de todo con materiales de primera calidad. Tu casa o negocio estará en buenas manos, ¡garantizado!",
     img: albanileriaImage,
   },
   {
     title: "Reparación y Mantenimiento de Equipos de Climatización",
-    description: "Brindamos servicios especializados para mantener tus sistemas de climatización en óptimas condiciones. Desde la reparación de aires acondicionados hasta la optimización de sistemas, nos aseguramos de que tu ambiente sea siempre confortable.",
+    description:
+      "¿Tu aire acondicionado no enfría como antes? Somos especialistas en sistemas de climatización. Desde el mantenimiento preventivo hasta la reparación de fallas, aseguramos que estés cómodo todo el año. Ideal para enfrentar los inviernos marplatenses y los calores del verano.",
     img: climatizacionImage,
   },
   {
     title: "Servicios Eléctricos",
-    description: "Nuestros electricistas altamente capacitados brindan servicios eléctricos seguros y eficientes. Desde la instalación de nuevos sistemas hasta la reparación de fallas, garantizamos un suministro eléctrico confiable.",
+    description:
+      "Solucionamos problemas eléctricos de forma rápida y segura. Desde la instalación de sistemas nuevos hasta reparaciones urgentes, nuestro equipo cuenta con experiencia en hogares y comercios de Mar del Plata. No corras riesgos, llamanos y dejá que un profesional se encargue.",
     img: electricidadImage,
   },
   {
     title: "Mantenimiento de Baños y Fontanería",
-    description: "Nos especializamos en el mantenimiento de baños y sistemas de fontanería. Desde la reparación de fugas hasta la instalación de nuevos accesorios, nos encargamos de que tus instalaciones sanitarias funcionen perfectamente.",
+    description:
+      "Nos encargamos de mantener tus baños y sistemas de cañerías en perfecto estado. Reparamos pérdidas de agua, cambiamos griferías o realizamos instalaciones completas. Si estás en Mar del Plata, podés confiar en nosotros para que tus instalaciones estén como nuevas.",
     img: fontaneriaImage,
   },
   {
     title: "Revisión y Mantenimiento de Sistemas de Gas",
-    description: "Realizamos revisiones y mantenimiento exhaustivos de sistemas de gas para garantizar la seguridad y eficiencia. Desde la detección de fugas hasta la calibración de equipos, cuidamos de tu sistema de gas.",
+    description:
+      "Tu seguridad es nuestra prioridad. Detectamos y solucionamos fugas, realizamos inspecciones y calibramos equipos de gas. Conocemos las normativas locales y trabajamos para que tu hogar o negocio en Mar del Plata sea un lugar seguro.",
     img: gasImage,
   },
   {
     title: "Pintura y Acabados",
-    description: "Nuestros expertos en pintura ofrecen servicios de alta calidad para darle vida a tus espacios. Ya sea una nueva capa de color o un acabado especial, nos encargamos de transformar tus ambientes.",
+    description:
+      "Transformamos tus espacios con pintura de calidad. Ya sea una renovación completa o detalles en paredes y techos, nuestros pintores son expertos en dar vida a tus ideas. Un cambio de color puede hacer maravillas por tu casa o negocio.",
     img: pinturaYAcabadosImage,
   },
   {
     title: "Instalación y Reemplazo de Iluminación LED",
-    description: "Actualizamos el sistema de iluminación de tu hogar o negocio a tecnología LED, que ofrece mayor eficiencia energética y durabilidad. Instalamos lámparas, focos y tubos LED en diferentes áreas para mejorar la iluminación y reducir costos de electricidad.",
+    description:
+      "Actualizá tu iluminación con tecnología LED para ahorrar energía y mejorar la estética. Instalamos lámparas, tubos y sistemas personalizados en viviendas y locales comerciales de Mar del Plata. Además de ser funcional, ¡tu espacio lucirá increíble!",
     img: reemplazoDeTubosLEDImage,
   },
 ];
+
 
 const ServiceCard = () => {
   const [current, setCurrent] = useState(0);
